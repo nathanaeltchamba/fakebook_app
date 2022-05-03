@@ -1,9 +1,11 @@
 from app import app 
+from flask import render_template
+
 
 # MAIN APPLICATION ROUTES
 @app.route('/')
 def home():
-    return 'Home Page'
+    return render_template('main/home.html')
 
 @app.route('/contact')
 def contact():
@@ -11,7 +13,7 @@ def contact():
 
 @app.route('/profile')
 def profile():
-    return 'Profile Page'
+    return render_template('main/profile.html')
 
 # USER ROUTES
 @app.route('/users')
